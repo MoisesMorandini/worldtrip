@@ -9,6 +9,9 @@ export const theme = extendTheme({
       "200": "#DADADA",
     }
   },
+  breakpoints: {
+    sm: '375px'
+  },
   fonts: {
     heading: 'Poppins',
     body: 'Poppins'
