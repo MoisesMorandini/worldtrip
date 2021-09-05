@@ -1,4 +1,4 @@
-import { Flex, Text, Box } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import Head from 'next/Head'
 import { Header } from '../components/Header'
 export default function Home() {
@@ -7,10 +7,9 @@ export default function Home() {
       <Head>
         <title>Home | Worldtrip</title>
       </Head>
-      <Flex direction="column" w={{ base: "375px", sm: "1440px" }} >
+      <Flex direction="column" maxWidth="1440px" m="0 auto">
         <Header />
-
-        <Text color="gray.600">aaaa</Text>
+        <Header backHome />
       </Flex>
     </>
   )

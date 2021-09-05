@@ -10,7 +10,10 @@ export const theme = extendTheme({
     }
   },
   breakpoints: {
-    sm: '375px'
+    sm: '23.439em', // 375
+    md: "48em",     // 768
+    lg: "62em",     // 992
+    xl: "80em",     // 1.280
   },
   fonts: {
     heading: 'Poppins',
