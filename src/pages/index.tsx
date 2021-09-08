@@ -1,10 +1,11 @@
-import { Flex, Divider, useMediaQuery } from '@chakra-ui/react'
+import { Flex, Divider, useMediaQuery, Text } from '@chakra-ui/react'
 
 import Head from 'next/Head'
 import { Header } from '../components/Header'
 import { Banner } from '../components/Home/Banner';
 import { TravelTypes } from '../components/Home/TravelTypes';
 import { LetsGoMessage } from '../components/Home/LetsGoMessage';
+import { Carousel } from '../components/Home/Carousel';
 
 export default function Home() {
   const [isLargarThan1280] = useMediaQuery("(min-width: 1280px)");
@@ -14,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Home | Worldtrip</title>
       </Head>
-      <Flex direction="column" maxWidth="1440px" m="0 auto">
+      <Flex direction="column" maxWidth="1440px" m={['0 auto 24px', '0 auto 32px', '0 auto 40px']}>
         <Header />
         <Banner isLargarThan1280={isLargarThan1280} />
         <TravelTypes />
@@ -24,6 +25,7 @@ export default function Home() {
 
         <LetsGoMessage />
 
+        <Carousel />
       </Flex>
     </>
   )
