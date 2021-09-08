@@ -1,4 +1,6 @@
-import { Flex, Divider, useMediaQuery, Text } from '@chakra-ui/react'
+import { GetStaticProps } from 'next';
+
+import { Flex, Divider, useMediaQuery } from '@chakra-ui/react'
 
 import Head from 'next/Head'
 import { Header } from '../components/Header'
@@ -7,7 +9,16 @@ import { TravelTypes } from '../components/Home/TravelTypes';
 import { LetsGoMessage } from '../components/Home/LetsGoMessage';
 import { Carousel } from '../components/Home/Carousel';
 
-export default function Home() {
+interface HomeProps {
+  continents: {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+  }[]
+}
+
+export default function Home({ continents }: HomeProps) {
   const [isLargarThan1280] = useMediaQuery("(min-width: 1280px)");
 
   return (
@@ -25,8 +36,16 @@ export default function Home() {
 
         <LetsGoMessage />
 
-        <Carousel />
+        <Carousel continents={continents} />
       </Flex>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await fetch('http://localhost:3333/continents');
+  const continents = await response.json();
+  return {
+    props: { continents }
+  }
 }
