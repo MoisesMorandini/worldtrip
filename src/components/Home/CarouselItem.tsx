@@ -7,7 +7,6 @@ interface CarouselItemProps {
 }
 
 export function CarouselItem({ description, name, imagePath }: CarouselItemProps) {
-  console.log(`CarouselItem -> description`, description)
   return (
     <Flex direction='column' justifyContent='center' alignItems='center'
       width={['375px', '720px', '720px', '1080px', '1240px']}

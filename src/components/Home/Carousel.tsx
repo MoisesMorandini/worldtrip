@@ -20,7 +20,6 @@ interface CarouselProps {
 }
 
 export function Carousel({ continents }: CarouselProps) {
-  console.log(`Carousel -> continents`, continents)
   const pagination = {
     "clickable": true,
     "renderBullet": function (index, className) {
