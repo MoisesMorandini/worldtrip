@@ -37,17 +37,20 @@ export default function Continent({ continent }: ContinentProps) {
         <Header backHome />
         <Banner continentName={continent.name} imagePath={continent.continent_image} />
 
-        <Flex direction='row' color='black' m={['140px', '80px']}>
+        <Flex direction={{ base: 'column', md: 'row' }} color='black'
+          m={['24px 16px', '40px 50px', '60px 95px', '80px 140px']}>
+
           <Bio description={continent.description} />
 
-          <Flex m='auto auto auto 70px' width='490px' justifyContent='space-between' align='center'>
+          <Flex m={['16px 16px 16px 0', '16px auto', 'auto auto auto 70px']}
+            width={['100%', '290px', '390px', '490px']}
+            justifyContent='space-between' align='center'>
             <Info quantity={continent.total_country} type='países' />
             <Info quantity={continent.total_language} type='línguas' />
             <Info quantity={continent.total_city} type=' cidades +100' />
           </Flex>
 
         </Flex>
-
       </Flex>
     </>
   )
