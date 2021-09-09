@@ -1,8 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import Head from 'next/Head'
 import { Header } from '../../components/Header';
 import { Banner } from '../../components/Continents/Banner';
+import { Info } from '../../components/Continents/Info';
 
 interface ContinentProps {
   continent: {
@@ -31,9 +32,14 @@ export default function Continent({ continent }: ContinentProps) {
         <title> {continent.name} | Worldtrip </title>
       </Head>
 
-      <Flex direction="column" maxWidth="1440px" m={['0 auto 24px', '0 auto 32px', '0 auto 40px']}>
+      <Flex direction='column' maxWidth='1440px' m={['0 auto 24px', '0 auto 32px', '0 auto 40px']}>
         <Header backHome />
         <Banner continentName={continent.name} imagePath={continent.continent_image} />
+
+        <Flex direction='row' color='black' m={['140px', '80px']}>
+          <Info description={continent.description} />
+        </Flex>
+
       </Flex>
     </>
   )
