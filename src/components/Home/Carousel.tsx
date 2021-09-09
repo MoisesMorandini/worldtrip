@@ -37,8 +37,8 @@ export function Carousel({ continents }: CarouselProps) {
         {
           continents.map(continent => {
             return (
-              <SwiperSlide key={String(continent.id)}>
-                <CarouselItem imagePath={continent.image}
+              <SwiperSlide key={continent.id}>
+                <CarouselItem continentId={continent.id} imagePath={continent.image}
                   name={continent.name} description={continent.description} />
               </SwiperSlide>
             )
