@@ -3,7 +3,7 @@ import { Flex } from '@chakra-ui/react';
 import Head from 'next/Head'
 import { Header } from '../../components/Header';
 import { Banner } from '../../components/Continents/Banner';
-import { Info } from '../../components/Continents/Info';
+import { Bio } from '../../components/Continents/Bio';
 
 interface ContinentProps {
   continent: {
@@ -37,7 +37,7 @@ export default function Continent({ continent }: ContinentProps) {
         <Banner continentName={continent.name} imagePath={continent.continent_image} />
 
         <Flex direction='row' color='black' m={['140px', '80px']}>
-          <Info description={continent.description} />
+          <Bio description={continent.description} />
         </Flex>
 
       </Flex>
