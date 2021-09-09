@@ -1,9 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Flex } from '@chakra-ui/react';
+import { Flex, Box, Text } from '@chakra-ui/react';
 import Head from 'next/Head'
 import { Header } from '../../components/Header';
 import { Banner } from '../../components/Continents/Banner';
 import { Bio } from '../../components/Continents/Bio';
+import { Info } from '../../components/Continents/Info';
 
 interface ContinentProps {
   continent: {
@@ -38,6 +39,13 @@ export default function Continent({ continent }: ContinentProps) {
 
         <Flex direction='row' color='black' m={['140px', '80px']}>
           <Bio description={continent.description} />
+
+          <Flex m='auto auto auto 70px' width='490px' justifyContent='space-between' align='center'>
+            <Info quantity={continent.total_country} type='países' />
+            <Info quantity={continent.total_language} type='línguas' />
+            <Info quantity={continent.total_city} type=' cidades +100' />
+          </Flex>
+
         </Flex>
 
       </Flex>
