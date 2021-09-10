@@ -1,11 +1,9 @@
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 
+import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import SwiperCore, {
-  Navigation,
-  Pagination
-} from 'swiper';
+
 import { CarouselItem } from './CarouselItem';
 SwiperCore.use([Navigation, Pagination]);
 
@@ -23,9 +21,7 @@ export function Carousel({ continents }: CarouselProps) {
   const pagination = {
     "clickable": true,
     "renderBullet": function (index, className) {
-      return (
-        '<span class=\"' + className + '\">' + '</span>'
-      )
+      return ('<span class=\"' + className + '\">' + '</span>')
     }
   }
 

@@ -56,13 +56,14 @@ export default function Continent({ continent }: ContinentProps) {
             </Flex>
           </Flex>
 
-
           <Flex mt={['80px']} direction='column'>
+
             <Text color='gray.600' fontWeight='500' fontSize={['36px']}
               lineHeight={['54px']}
             >
               Cidades +{continent.total_city - continent.cities.length}
             </Text>
+
             <SimpleGrid mt={['20px', '25px', '30px', '35px', '40px']} flex="1" gap={['1em', '1.6em', '2.1em', '2.81em']} minChildWidth="256px"
               rowGap={['20px', '26px', '32px', '40px', '48px']}
             >
@@ -93,7 +94,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const response = await fetch(`http://localhost:3333/continentsInfo/${id}`);
   const continent = await response.json();
-
 
   return {
     props: { continent }

@@ -11,10 +11,10 @@ export const theme = extendTheme({
     }
   },
   breakpoints: {
-    sm: '23.439em', // 375
-    md: "48em",     // 768
-    lg: "62em",     // 992
-    xl: "80em",     // 1.280
+    sm: '23.439em', // 375px
+    md: "48em",     // 768px
+    lg: "62em",     // 992px
+    xl: "80em",     // 1.280px
   },
   fonts: {
     heading: 'Poppins',

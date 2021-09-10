@@ -27,7 +27,7 @@ export default function Home({ continents }: HomeProps) {
         <title>Home | Worldtrip</title>
       </Head>
       <Flex direction="column" maxWidth="1440px" m={['0 auto 24px', '0 auto 32px', '0 auto 40px']}>
-        <Header backHome />
+        <Header />
         <Banner isLargarThan1280={isLargarThan1280} />
         <TravelTypes />
 

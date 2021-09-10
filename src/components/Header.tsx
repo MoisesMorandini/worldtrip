@@ -20,9 +20,7 @@ export function Header({ backHome = false }: HeaderProps) {
       <Image src="/images/Logo.png" alt="Worldtrip" m="0 auto"
         w={['5.06em', '8.28em', '11.5em']}
         h={['1.25em', '2.06em', '2.875em']}
-
       />
-
     </Flex>
   );
 }
